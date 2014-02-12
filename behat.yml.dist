@@ -1,0 +1,13 @@
+# This file is part of the Sylius package.
+# (c) Paweł Jędrzejewski
+
+default:
+    context:
+        class: Sylius\Bundle\WebBundle\Behat\FeatureContext
+    extensions:
+        Behat\MinkExtension\Extension:
+            default_session: symfony2
+            goutte: ~
+            browser_name: firefox
+        Behat\Symfony2Extension\Extension:
+            mink_driver: true
