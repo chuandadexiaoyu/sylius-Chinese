@@ -15,11 +15,12 @@
 
         {# stylesheets... #}
         {% block stylesheets %}
-            <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" type="text/css" />
+            <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" type="text/css" />-->
             <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" type="text/css" />
             {% stylesheets output='assets/compiled/frontend.css' filter='cssrewrite'
                 '@SyliusWebBundle/Resources/assets/css/frontend.css'
                 '@SyliusWebBundle/Resources/assets/css/blueimp-gallery.css'
+                '@SyliusWebBundle/Resources/assets/css/bootstrap.min.css'
             %}
                 <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
             {% endstylesheets %}
@@ -109,12 +110,13 @@
 
         {# javascripts... #}
         {% block javascripts %}
-            <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+           <!-- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
             <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
         {% javascripts output='assets/compiled/frontend.js'
             '@SyliusWebBundle/Resources/assets/js/jquery.blueimp-gallery.min.js'
             '@SyliusWebBundle/Resources/assets/js/confirm-modal.js'
             '@SyliusWebBundle/Resources/assets/js/frontend.js'
+            '@SyliusWebBundle/Resources/assets/js/jquery-1.10.1.min.js'
         %}
             <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
